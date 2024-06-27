@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import logo from "../img/logo.png"
+import { Link } from 'react-router-dom';
+
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -87,9 +89,11 @@ const Login: React.FC = () => {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Don't have an account?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+            <Link to="/register">
+            <a className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
               Sign up
             </a>
+            </Link>
           </p>
         </div>
       </div>
